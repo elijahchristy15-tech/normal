@@ -16,8 +16,33 @@
     text-align: center;
     transition: background-color 1s ease;
     }
+            button {
+        padding: 10px 20px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background-color: white;
+        transition: background-color 0.3s, transform 0.2s;
+      }
+      button:hover {
+        background-color: lightgrey;
+        transform: scale(1.05);
+      }
       </style>
       </head>
-  <h1>hi<h1>
-      <body>
+  <body>
+    <h1>click down to change colors</h1>
+    <button onclick="changeBackground()">change colors</button>
+      <h1>version 1.0</h1>
+  <script>
+    const colors = ["lightblue", "coral", "blue"];
+      let index = 0
+
+        function changeBackground() {
+          index = (index + 1) % colors.length;
+            document.body.style.backgroundColor = colors[index];
+        }
+  </script>
+  </body>
       </html>
